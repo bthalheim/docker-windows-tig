@@ -1,0 +1,24 @@
+
+version: '3'
+services:
+  
+  grafana:
+    
+    image: bthal/grafana:servercore-1903
+    hostname: grafana  
+    ports:
+      - "3000:3000"
+
+  influxdb: 
+    
+    image: bthal/influxdb:servercore-1903
+    hostname: influxdb 
+    
+  telegraf:
+    
+    image: bthal/telegraf:servercore-1903
+    command: --config c:\\t_config\\telegraf.conf
+    volumes:
+      - ./t_config:c:\t_config
+           
+    
