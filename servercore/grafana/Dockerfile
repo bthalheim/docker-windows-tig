@@ -7,6 +7,8 @@ ARG WINDOWS_VER="1903"
 FROM $BASE:$WINDOWS_VER
 ARG GRAFANA_VER
 
+LABEL maintainer="https://github.com/bthalheim"
+LABEL description="Grafana running on windows servercore."
 
 SHELL ["cmd", "/S", "/C"]
 
